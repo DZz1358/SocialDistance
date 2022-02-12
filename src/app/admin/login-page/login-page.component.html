@@ -1,1 +1,22 @@
-<p>login-page works!</p>
+<form class="card" [formGroup]="formLogin" (ngSubmit)="submit()">
+    <h1>Enter in Admin</h1>
+    <div class="form-control">
+        <label for="email">Email:</label>
+        <input id="email" type="email" formControlName="email">
+        <div class="validation" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+            <div>
+                <small>Do not correct email</small>
+            </div>
+        </div>
+    </div>
+
+    <div class=" form-control">
+        <label for="password">Password:</label>
+        <input id="password" type="password" formControlName="password">
+        <div class="validation" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+            <small>Do not correct password</small>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="formLogin.invalid ">Log In</button>
+</form>
