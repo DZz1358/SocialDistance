@@ -1,12 +1,6 @@
 export interface Environment {
     apiKey: string,
-    production: boolean
+    production: boolean,
+    fbDbUrl: string
 }
 
-export interface Post {
-    id?: string,
-    title: string,
-    author: string,
-    text: string,
-    date: Date
-}
