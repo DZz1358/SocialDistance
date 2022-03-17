@@ -28,7 +28,6 @@ export class LoginPageComponent implements OnInit {
         this.message = 'Залогинтесь плиз'
       }
     })
-    
   }
 
   createForm() {

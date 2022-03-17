@@ -9,6 +9,8 @@ import { PostPageComponent } from './post-page/post-page.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 import { AdminModule } from './admin/admin.module';
 import { PostComponent } from './shared/components/post/post.component';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { PostComponent } from './shared/components/post/post.component';
     BrowserAnimationsModule,
     NgbModule,
     AppRoutingModule,
-    AdminModule
+    AdminModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
