@@ -12,6 +12,11 @@ import { AdminModule } from './admin/admin.module';
 import { PostComponent } from './shared/components/post/post.component';
 import { SharedModule } from './shared/shared.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import uaLocal from '@angular/common/locales/ru';
+import { environment } from '../environments/environment';
+
+registerLocaleData(uaLocal, 'ru');
 
 const INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,

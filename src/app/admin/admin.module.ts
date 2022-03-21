@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './shared/services/auth.service';
 import { SharedModule } from '../shared/shared.module';
 import { AuthGuard } from './shared/services/auth.guard';
+import { AlertComponent } from './shared/components/alert/alert.component';
+import { AlertService } from './shared/services/alert.service';
 
 
 
@@ -22,6 +24,7 @@ import { AuthGuard } from './shared/services/auth.guard';
     CreatePageComponent,
     EditPageComponent,
     SearchPipe,
+    AlertComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +44,6 @@ import { AuthGuard } from './shared/services/auth.guard';
     ])
   ],
   exports: [RouterModule],
-  providers: [AuthService, AuthGuard]
+  providers: [AuthService, AuthGuard, AlertService]
 })
 export class AdminModule { }
